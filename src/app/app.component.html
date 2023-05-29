@@ -1,0 +1,19 @@
+<app-navigation (onChanged)="onChanged($event)"></app-navigation>
+
+
+<app-apod *ngIf="category=='apod'"></app-apod>
+<app-asteroids *ngIf="category=='asteroids'"></app-asteroids>
+
+
+<div class="login-panel">
+  <h2>Панель авторизации</h2>
+  <form id="login-form">
+    <div class="form-group">
+      <label for="api-key">API-ключ:</label>
+      <input type="text" id="api-key" name="api-key" required #authkey>
+    </div>
+    <div class="form-group">
+      <input type="button" value="Войти" (click)="AuthUser(authkey.value)">
+    </div>
+  </form>
+</div>
