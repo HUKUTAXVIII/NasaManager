@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthService } from './auth.service';
+import { NasaApiService } from './api.service';
 
 @Component({
   selector: 'app-root',
@@ -8,12 +10,33 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'NasaManager';
   category = '';
-  AuthUser(option:string){
-    console.log(option);
+
+  constructor(private authService: AuthService,private nasaApiService: NasaApiService) { }
+
+  AuthUser(key:string){
+
+    this.nasaApiService.setApiKey(key);
+    this.nasaApiService.verifyApiKey()
+    .then((isValid) => {
+      if(isValid){
+        this.authService.setToken(key);
+        this.category = 'apod';
+      }
+      })
+      .catch((error) => {
+        this.nasaApiService.removeApiKey();
+        console.error('Ошибка при проверке ключа API:', error);
+      });
+      
+    
     return false;
   }
+
   onChanged(category:any){
       this.category = category;
+  }
+  getToken(): string {
+    return this.authService.getToken();
   }
 
 }

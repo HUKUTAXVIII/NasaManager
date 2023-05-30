@@ -5,7 +5,7 @@
 <app-asteroids *ngIf="category=='asteroids'"></app-asteroids>
 
 
-<div class="login-panel">
+<div class="login-panel" *ngIf="getToken().length==0">
   <h2>Панель авторизации</h2>
   <form id="login-form">
     <div class="form-group">

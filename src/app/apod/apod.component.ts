@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NasaApiService } from '../api.service';
 
 @Component({
   selector: 'app-apod',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./apod.component.css']
 })
 export class ApodComponent {
+    constructor(private nasaApiService: NasaApiService){}
+
     
+
+
 }
