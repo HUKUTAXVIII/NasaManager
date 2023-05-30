@@ -1,0 +1,16 @@
+<div class="mars-form">
+    <h2>Mars API</h2>
+  
+    <div class="form-group">
+      <label for="date">Date:</label>
+      <input type="date" id="date" [(ngModel)]="date" required>
+    </div>
+  
+    <button (click)="searchImages()">Search Images</button>
+  
+    <div *ngIf="imageData" class="image-container">
+      <h3>Image:</h3>
+      <img [src]="imageData" alt="Mars Image">
+    </div>
+  </div>
+  

@@ -3,12 +3,12 @@
   <div class="apod-form">
     <form id="apod-form">
       <label for="apod-date">Дата:</label>
-      <input type="date" id="apod-date" name="apod-date" required>
+      <input type="date" id="apod-date" name="apod-date" required [(ngModel)]="selectedDate">
 
-      <input type="button" value="Показать">
+      <input type="button" value="Показать" (click)="getFromApi()">
     </form>
   </div>
 
-  <div class="apod-image" id="apod-image"></div>
-  <div class="apod-title" id="apod-title"></div>
-  <div class="apod-explanation" id="apod-explanation"></div>
+  <div class="apod-image" id="apod-image"><img src="{{image}}" alt=""></div>
+  <div class="apod-title" id="apod-title">{{title}}</div>
+  <div class="apod-explanation" id="apod-explanation">{{explanation}}</div>

@@ -6,6 +6,8 @@
     <div class="navbar-menu" *ngIf="getToken().length!=0">
       <div class="navbar-menu-item" (click)="ChageCategory('apod')">APOD</div>
       <div class="navbar-menu-item" (click)="ChageCategory('asteroids')">Asteroids</div>
-      <div class="navbar-menu-item">Earth</div>
+      <div class="navbar-menu-item" (click)="ChageCategory('earth')">Earth</div>
+      <div class="navbar-menu-item" (click)="ChageCategory('mars')">Mars</div>
+      <div class="navbar-menu-item" (click)="ChageCategory('epic')">Epic</div>
     </div>
 </div>

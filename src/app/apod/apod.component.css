@@ -42,15 +42,17 @@ h1 {
   }
 
   .apod-image img {
-    max-width: 100%;
+    max-width: 500px;
     height: auto;
   }
 
   .apod-title {
     text-align: center;
+    width:300px;
     margin-top: 10px;
   }
 
   .apod-explanation {
     margin-top: 10px;
+    width:300px;
   }

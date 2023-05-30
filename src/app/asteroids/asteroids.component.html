@@ -1,1 +1,28 @@
-<p>asteroids works!</p>
+<div class="asteroids-form">
+  <h2>Asteroids API</h2>
+
+  <div class="form-group">
+    <label for="start-date">Start Date:</label>
+    <input type="date" id="start-date" [(ngModel)]="startDate" required>
+  </div>
+
+  <div class="form-group">
+    <label for="end-date">End Date:</label>
+    <input type="date" id="end-date" [(ngModel)]="endDate" required>
+  </div>
+
+  <button (click)="searchAsteroids()">Search Asteroids</button>
+
+  <div *ngIf="asteroidsData && asteroidsData.length > 0" class="asteroids-container">
+    <h3>Asteroids:</h3>
+    <ul>
+      <li *ngFor="let asteroid of asteroidsData">
+        <p>Name: {{ asteroid.name }}</p>
+        <p>Close Approach Date: {{ asteroid.near_earth_objects }}</p>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="asteroidsData && asteroidsData.length === 0" class="no-asteroids">
+    No asteroids found for the selected dates.
+  </div>
+</div>
