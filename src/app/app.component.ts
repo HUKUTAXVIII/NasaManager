@@ -10,6 +10,7 @@ import { NasaApiService } from './api.service';
 export class AppComponent {
   title = 'NasaManager';
   category = '';
+  errMsg='';
 
   constructor(private authService: AuthService,private nasaApiService: NasaApiService) { }
 
@@ -21,6 +22,9 @@ export class AppComponent {
       if(isValid){
         this.authService.setToken(key);
         this.category = 'apod';
+        this.errMsg='';
+      }else{
+        this.errMsg = '*Incorrect Key';
       }
       })
       .catch((error) => {

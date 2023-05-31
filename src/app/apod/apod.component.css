@@ -23,20 +23,18 @@ h1 {
   }
 
   .apod-form input[type="button"] {
-    background-color: #4caf50;
+    background-color: #5149bb;
     color: #fff;
-    padding: 10px 20px;
+    padding: 6px 20px;
     font-size: 16px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
   }
 
-  .apod-form input[type="button"]:hover {
-    background-color: #45a049;
-  }
 
   .apod-image {
+    margin:0 auto;
     text-align: center;
     margin-top: 20px;
   }
@@ -47,12 +45,15 @@ h1 {
   }
 
   .apod-title {
+    margin:0 auto;
     text-align: center;
     width:300px;
     margin-top: 10px;
+    font-weight: 900;
   }
 
   .apod-explanation {
+    margin:0 auto;
     margin-top: 10px;
     width:300px;
   }

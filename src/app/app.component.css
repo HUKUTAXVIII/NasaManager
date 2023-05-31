@@ -22,6 +22,10 @@ body {
   .form-group {
     margin-bottom: 20px;
   }
+  .form-group p{
+    color:rgb(233, 11, 11);
+    font-style: italic;
+  }
 
   .form-group label {
     display: block;
@@ -30,7 +34,7 @@ body {
   }
 
   .form-group input[type="text"] {
-    width: 100%;
+    width: 94%;
     padding: 10px;
     font-size: 16px;
     border-radius: 4px;
@@ -38,15 +42,12 @@ body {
   }
 
   .form-group input[type="button"] {
-    background-color: #4caf50;
+    background-color: #4954bb;
     color: #fff;
-    padding: 10px 20px;
+    padding: 6px 20px;
     font-size: 16px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
-
-  .form-group input[type="button"]:hover {
-    background-color: #45a049;
+    margin-top: 10px;
   }

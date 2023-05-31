@@ -1,11 +1,11 @@
-<h1>APOD - NASA</h1>
+<h1>Astronomy Picture of the Day</h1>
 
   <div class="apod-form">
     <form id="apod-form">
-      <label for="apod-date">Дата:</label>
+      <label for="apod-date">Date:</label>
       <input type="date" id="apod-date" name="apod-date" required [(ngModel)]="selectedDate">
 
-      <input type="button" value="Показать" (click)="getFromApi()">
+      <input type="button" value="Search" (click)="getFromApi()">
     </form>
   </div>
 

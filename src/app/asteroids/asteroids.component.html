@@ -1,5 +1,5 @@
 <div class="asteroids-form">
-  <h2>Asteroids API</h2>
+  <h1>Asteroids</h1>
 
   <div class="form-group">
     <label for="start-date">Start Date:</label>
@@ -11,16 +11,20 @@
     <input type="date" id="end-date" [(ngModel)]="endDate" required>
   </div>
 
-  <button (click)="searchAsteroids()">Search Asteroids</button>
+  <button (click)="searchAsteroids()">Search</button>
 
   <div *ngIf="asteroidsData && asteroidsData.length > 0" class="asteroids-container">
     <h3>Asteroids:</h3>
-    <ul>
-      <li *ngFor="let asteroid of asteroidsData">
-        <p>Name: {{ asteroid.name }}</p>
-        <p>Close Approach Date: {{ asteroid.near_earth_objects }}</p>
-      </li>
-    </ul>
+    <table border="1">
+      <tr>
+        <td>Name</td>
+        <td>Close Approach Date</td>
+      </tr>
+      <tr *ngFor="let asteroid of asteroidsData">
+        <td>{{ asteroid.name }}</td>
+        <td>{{ asteroid.near_earth_objects }}</td>
+      </tr>
+    </table>
   </div>
   <div *ngIf="asteroidsData && asteroidsData.length === 0" class="no-asteroids">
     No asteroids found for the selected dates.

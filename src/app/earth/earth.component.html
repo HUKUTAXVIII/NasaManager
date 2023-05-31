@@ -1,5 +1,5 @@
 <div class="earth-form">
-    <h2>Earth API</h2>
+    <h1>Earth</h1>
   
     <div class="form-group">
       <label for="date">Date:</label>
@@ -16,11 +16,11 @@
       <input type="number" id="lon" [(ngModel)]="lon" required>
     </div>
   
-    <button (click)="searchImages()">Search Images</button>
+    <button (click)="searchImages()">Search</button>
   
     <div *ngIf="imageData" class="image-container">
       <h3>Image:</h3>
-      <img src="{{imageData}}" alt="Earth Image">
+      <img src="{{imageData}}" alt="No Image">
     </div>
   </div>
   

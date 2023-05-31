@@ -9,14 +9,15 @@
 
 
 <div class="login-panel" *ngIf="getToken().length==0">
-  <h2>Панель авторизации</h2>
+  <h2>Authorization Panel</h2>
   <form id="login-form">
     <div class="form-group">
-      <label for="api-key">API-ключ:</label>
+      <label for="api-key">API-Key:</label>
       <input type="text" id="api-key" name="api-key" required #authkey>
+      <p>{{errMsg}}</p>
     </div>
     <div class="form-group">
-      <input type="button" value="Войти" (click)="AuthUser(authkey.value)">
+      <input type="button" value="Enter" (click)="AuthUser(authkey.value)">
     </div>
   </form>
 </div>
